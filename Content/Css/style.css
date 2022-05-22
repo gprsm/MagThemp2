@@ -56,6 +56,13 @@ span {
     font-family: IRANSans;
     font-weight: 300;
 }
+p{text-align: justify !important;}
+.card-title {
+    text-align: right !important;
+}
+.card-body{
+    direction: rtl !important;
+}
 h1 {
     font-weight: bold !important;
 }
@@ -350,3 +357,9 @@ a.close-canvas-menu {
     transition: border .24s ease-in-out;
 }
 
+.card .view img{
+    max-height: 150px;
+}
+section .list-group {
+    padding-right: 0px;
+}
