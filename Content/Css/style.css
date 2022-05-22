@@ -1,0 +1,352 @@
+@import url('../Fonts/awsom/css/all.min.css');
+@import url('../Fonts/farsi/style.css');
+
+
+.gridview {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
+}
+.validator {
+    color: #d41919;
+}
+.enfont {
+    font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.capcha {
+    display: initial;
+    text-align: -webkit-center;
+    -moz-align-content: center;
+    -o-align-content: center;
+    -webkit-align-content: center;
+    align-content: center;
+}
+
+@media print {
+    .noPrint { display: none; }
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+div,
+a,
+strong,
+button,
+hr,
+label,
+title,
+table,
+body,
+input,
+select,
+textarea,
+b,
+samp,
+small,
+li {
+    font-family: IRANSans !important;
+    font-weight: 300;
+}
+span {
+    font-family: IRANSans;
+    font-weight: 300;
+}
+h1 {
+    font-weight: bold !important;
+}
+b {
+    font-weight: bold !important;
+}
+small {
+    font-weight: 200 !important;
+}
+.ltr {
+    direction: ltr;
+}
+.text-white {
+    color: #ffffff !important;
+}
+.text-right {
+    text-align: right !important;
+}
+.text-center {
+    text-align: center !important;
+}
+.text-left {
+    text-align: left !important;
+}
+.textSmall {
+    font-size: 12px !important;
+}
+.text-small {
+    font-size: 0.8em !important;
+}
+.text-xsmall {
+    font-size: 0.6em !important;
+}
+.text-large {
+    font-size: 1.2em !important;
+}
+.text-xlarge {
+    font-size: 1.4em !important;
+}
+.text-underline {
+    text-decoration:underline;
+}
+.text-ultralight {
+    font-weight: 200;
+}
+.text-light {
+    font-weight: 300;
+}
+.FarsiNum {
+    font-family: IRANSans !important;
+    font-weight: 300;
+}
+.text-regular {
+    font-weight: normal;
+}
+.text-medium {
+    font-weight: 500;
+}
+.text-bold {
+    font-weight: bold;
+}
+.text-black {
+    font-weight: 900;
+}
+.divWaiting{
+    text-decoration: none;
+    position: fixed;
+    background-color: black;
+    z-index: 2147483647 !important;
+    opacity: 0.8;
+    overflow: hidden;
+    text-align: center; top: 0; left: 0;
+    height: 100%;
+    width: 100%;
+    padding-top:20%;
+}
+.partialWaiting {
+    text-decoration: none;
+    position: fixed;
+    background-color: black;
+    opacity: 0.8;
+    overflow: hidden;
+    text-align: center; top: 0; left: 0;
+    height: 100%;
+    width: 100%;
+    padding-top:20%;
+}
+.SmallImagesize {
+    width: 48px;
+    height: 48px;
+}
+a.close-canvas-menu {
+    left: 15px !important;
+    right: unset !important;
+}
+.parsley-required {
+    color: red;
+}
+.parsley-errors-list {
+    color: red;
+}
+.modal-body {
+    padding: 20px 30px 30px 30px;
+    padding-top: 20px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+}
+.onoffswitch-label {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid #1AB394;
+    border-radius: 3px;
+}
+.table {
+    text-align: center !important;
+}
+.fa-spin {
+    padding-right: 0px !important
+}
+.clockpicker-popover {
+    min-width: 230px !important;
+}
+.TopSlider {
+    min-height: 450px !important;
+}
+.DepartmentMenuColor1 {
+    background-color: rgba(29, 74, 103, 0.8);
+}
+.DepartmentMenuColor2 {
+    background-color: rgba(50, 71, 66, 0.8);
+}
+.DepartmentMenuColor3 {
+    background-color: rgba(70, 58, 69, 0.8);
+}
+.DepartmentMenuColor4 {
+    background-color: rgba(158, 108, 87, 0.8);
+}
+.DepartmentMenuColor5 {
+    background-color: rgba(164, 108, 119, 0.85);
+}
+.DepartmentMenuColor6 {
+    background-color: rgba(80, 167, 159, 0.8);
+}
+.DepartmentMenuColor7 {
+    background-color: rgba(23, 116, 234, 0.8);
+}
+.DepartmentMenuColor8 {
+    background-color: rgba(108, 156, 148, 0.85);
+}
+.DepartmentMenuColor9 {
+    background-color: rgba(39, 103, 240, 0.8);
+}
+.dz-error-message {
+    color: white !important;
+}
+#primary-menu > ul > li > a {
+    font-size: 13px !important;
+}
+@media only screen and (max-width: 600px) {
+    #oc-clients .oc-item img {
+        height: auto !important;
+    }
+}
+@media only screen and (min-width: 601px) {
+    #oc-clients .oc-item img {
+        height: auto !important;
+    }
+}
+.box_resolve_Hieght {
+    margin-top: 7px !important;
+}
+.aparat-icon:hover {
+    -webkit-transition: opacity .5s;
+    -moz-transition: opacity .5s;
+    -o-transition: opacity .5s;
+    display: inline-block;
+}
+
+.minHeight100 {
+    min-height: 100px
+}
+.minHeight200 {
+    min-height: 200px
+}
+.minHeight300 {
+    min-height: 300px
+}
+.minHeight400 {
+    min-height: 400px
+}
+.darkHover:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    content: "";
+    display: block;
+    opacity: 0.6;
+    background-color: #000;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 6px;
+}
+.hero-message {
+    min-width: 100%;
+    position: relative;
+}
+.md-form label {
+    left: unset !important;
+    right: 0 !important;
+}
+.rtl {
+    direction: rtl !important;
+}
+.errorMessageInput {
+    float: right !important;
+    font-size: small !important;
+    direction: rtl !important;
+    color: #d41919;
+    margin-top: -20px !important;
+}
+.height-Center {
+    padding-top: 20%
+}
+.side-nav .collapsible > li {
+    padding-top: 10px !important;
+    margin: 15px !important;
+}
+.side-nav.wide .collapsible a {
+    font-size: 18px !important;
+    font-family: "IRANSans";
+    direction: rtl;
+    text-align: right
+}
+.side-nav.wide .collapsible .mr-2 {
+    padding-left: 16px !important;
+}
+.side-nav .fa-angle-down.rotate-icon {
+    left: 0 !important;
+    margin-left: 1.25rem;
+}
+.side-nav .fa-angle-down.rotate-icon {
+    position: absolute;
+    top: .8rem;
+    right: unset;
+    margin-right: 1.25rem;
+}
+.collapsible-body li {
+    padding-right: 8px !important;
+}
+.side-nav .collapsible-body ul {
+    background-color: rgba(0,0,0,0.15) !important;
+}
+.side-nav .collapsible-body a {
+    background-color: rgba(0,0,0,0) !important;
+}
+.collapsible-body a {
+    padding-right: 8px !important;
+}
+.dropdown-content {
+    max-height: 300px !important;
+}
+.hideModalContent {
+    display: contents !important;
+}
+
+.embed-responsive {
+    position: initial
+}
+.side-nav .logo-wrapper img {
+    max-height: 94px !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+.dropzone {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-width: 2px;
+    border-radius: 2px;
+    border-color: #eeeeee;
+    border-style: dashed;
+    background-color: #fafafa;
+    color: #bdbdbd;
+    outline: none;
+    transition: border .24s ease-in-out;
+}
+
