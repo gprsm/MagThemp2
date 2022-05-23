@@ -49,11 +49,11 @@ b,
 samp,
 small,
 li {
-    font-family: IRANSans !important;
+    font-family: IRANSansX !important;
     font-weight: 300;
 }
 span {
-    font-family: IRANSans;
+    font-family: IRANSansX !important;
     font-weight: 300;
 }
 p{text-align: justify !important;}
