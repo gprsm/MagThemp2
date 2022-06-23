@@ -48,9 +48,7 @@
             <div class="col-md-4 col-lg-3 col-xl-3 mr-auto mt-3">
 
                 <h6 class="text-uppercase mb-4 font-weight-bold">آخرین مطالب</h6>
-	            <?php if(is_active_sidebar('latest_posts_wig')){
-		            dynamic_sidebar('latest_posts_wig');
-	            } ?>
+	            <?php get_template_part("inc/Last","post2"); ?>
             </div>
             <!-- Grid column -->
 

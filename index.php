@@ -1,81 +1,97 @@
 <?php get_header(); ?>
-<?php get_template_part("inc/page","baner"); ?>
-<div class="container">
-   <div class="row">
-      <div class="page-content index-blog text-right">
-         <span class="page_title"><i class="fa fa-angle-left"></i> 
-         <?php if(is_home()){
-            echo "اخبار و مقالات";
-            }
-            elseif(is_category()){
-            echo single_cat_title();
-            }
-            elseif(is_tag()){
-            echo single_tag_title();
-            }
-            elseif(is_search()){
-            echo "جستجو کردید برای : ";
-            echo $_GET['s'];
-            }
-            ?>
-         </span>
-         <?php if(have_posts()){ ?>
-         <?php $i=0; while(have_posts()){ the_post(); ?>
-         <?php if($i%2==0){ ?>
-         <div class="row row1 rtl">
-            <div class="col-md-6">
-               <div class="desc">
-                  <h4><?php the_title(); ?></h4>
-                  <div class="meta">
-                     <span><i class="fa fa-calendar-o"></i> <?php  echo get_the_date(); ?></span>&nbsp;&nbsp;
-                     <span><i class="fa fa-comment-o"></i> <?php echo get_comments_number(); ?></span>&nbsp;&nbsp;
-                     <span><i class="fa fa-edit"></i> <?php echo get_the_author(); ?></span>&nbsp;&nbsp;
-                  </div>
-                  <p><?php echo get_the_excerpt(); ?></p>
-                  <div class="text-left">
-                     <a href="<?php the_permalink(); ?>" class="btn aqua-gradient btn-sm">ادامه مطلب <i class="fa fa-angle-left"></i></a>
-                  </div>
-               </div>
+<main>
+    <div class="container-fluid">
+        <div class="row mt-5">
+            <div class="col-xl-9 col-lg-9 col-md-12">
+                <section>
+                    <h5 class="dark-grey-text font-weight-bold text-right">
+                        <strong><?php if(is_home()){
+								echo "اخبار و مقالات";
+							}
+                            elseif(is_category()){
+								echo single_cat_title();
+							}
+                            elseif(is_tag()){
+								echo single_tag_title();
+							}
+                            elseif(is_search()){
+								echo "جستجو کردید برای : ";
+								echo $_GET['s'];
+							}
+							?></strong>
+                    </h5>
+                    <hr>
+                    <div class="row" >
+                        <div class=" card-columns">
+	                        <?php if(have_posts()){
+		                        while(have_posts()){ the_post();
+			                        foreach(get_the_category() as $category){
+				                        if ($category->name!="حدیث روز" && $category->name!="بنر"){
+					                        ?>
+                                            <div class="card card-cascade narrower">
+	                                            <?php if(has_post_thumbnail()){
+		                                            foreach(get_the_category() as $category){
+			                                            if ($category->name!="حدیث روز" && $category->name!="بنر"){?>
+                                                            <div class="view view-cascade overlay">
+                                                                <img class="card-img-top" src="<?php the_post_thumbnail_url(); ?>"
+                                                                     alt="<?php the_title(); ?>" />
+                                                                <a href="<?php the_permalink(); ?>">
+                                                                    <div class="mask rgba-white-slight waves-effect waves-light"></div>
+                                                                </a>
+                                                            </div>
+			                                            <?php  }
+		                                            }; } ?>
+                                                <div class="card-body card-body-cascade text-center pb-0">
+                                                    <h5 class="blue-text pb-2"><strong><?php the_title(); ?></strong></h5>
+                                                    <p class="card-text">
+	                                                    <?php echo get_the_excerpt(); ?>
+                                                    </p>
+                                                    <a class="text-center">
+                                                        <p class="text-xsmall rtl"> <?php  echo get_the_date(); ?></p>
+                                                    </a>
+                                                    <div class="card-footer text-center">
+                                                        <a class="btn btn-indigo btn-sm" href="<?php the_permalink(); ?>">مطالعه مطلب</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+				                        <?php   }else{ if ($category->name=="حدیث روز"){?>
+                                            <div class="card card-image mb-4" style="background-image: url(<?php the_post_thumbnail_url(); ?>);">
+                                                <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
+                                                    <div class="text-center">
+                                                        <br />
+                                                        <br />
+                                                        <br />
+                                                        <p class="card-title pt-2 mt-5"><strong><?php the_title(); ?></strong></p>
+                                                        <br />
+                                                        <br />
+                                                        <br />
+                                                        <br />
+                                                        <br />
+                                                        <div class="text-center">
+                                                            <a class="btn btn-info btn-sm" href="<?php the_permalink(); ?>"><i class="fas fa-clone left"></i> مشاهده</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+				                        <?php   }}}}}else{ echo '<span>نتیجه ای یافت نشد</span>';}; ?>
+                        </div>
+
+                        <div class="col-md-12 text-center">
+                            <div class="pagination-box">
+								<?php echo paginate_links(); ?>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
-            <div class="col-md-6">
-               <div class="view">
-                  <?php if(has_post_thumbnail()){ ?>
-                  <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>" class="img-fluid img-thumbnail z-depth-1">
-                  <?php } ?>
-               </div>
+            <div class="col-xl-3 col-lg-3 col-md-12">
+				<?php get_template_part("inc/search","box"); ?>
+				<?php get_template_part("inc/Categuries",""); ?>
+				<?php get_template_part("inc/Last","post"); ?>
             </div>
-         </div>
-         <?php } else{ ?>
-         <div class="row row1">
-            <div class="col-md-6">
-               <div class="view">
-                  <?php if(has_post_thumbnail()){ ?>
-                  <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>" class="img-fluid  img-thumbnail z-depth-1" />
-                  <?php } ?>
-               </div>
-            </div>
-            <div class="col-md-6">
-               <div class="desc">
-                  <h4><?php the_title(); ?></h4>
-                  <div class="meta">
-                     <span><i class="fa fa-calendar-o"></i> <?php  echo get_the_date(); ?></span>&nbsp;&nbsp;
-                     <span><i class="fa fa-comment-o"></i> <?php echo get_comments_number(); ?></span>
-                  </div>
-                  <p><?php echo get_the_excerpt(); ?></p>
-                  <div class="text-left">
-                     <a href="<?php the_permalink(); ?>" class="btn aqua-gradient btn-sm">ادامه مطلب <i class="fa fa-angle-left"></i></a>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <?php } ?>
-         <?php $i++; } wp_reset_postdata(); } else { echo "نتیجه ای یافت نشد !"; } ?>
-         <div class="col-md-12 text-center">
-            <div class="pagination-box">
-               <?php echo paginate_links(); ?>
-            </div>
-         </div>
-      </div>
-   </div>
-</div>
+        </div>
+    </div>
+</main>
+
 <?php get_footer(); ?>

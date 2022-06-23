@@ -2,7 +2,7 @@
 <?php get_template_part("inc/page","baner"); ?>
 <div class="container">
    <div class="row">
-      <div class="page-content single_content"> این page است
+      <div class="page-content single_content"> page
          <?php while(have_posts()){ the_post(); ?>
          <div class="col-md-9">
             <div class="content_bx">
